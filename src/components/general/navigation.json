@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_general_navigations",
+  "info": {
+    "displayName": "Navigation"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    },
+    "item": {
+      "type": "component",
+      "component": "general.navigation-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
