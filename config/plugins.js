@@ -6,6 +6,7 @@ module.exports = ({ env }) => ({
                 apiUrl: env('SUPABASE_URL'),
                 apiKey: env('SUPABASE_PUBLIC_KEY'),
                 bucket: env('SUPABASE_BUCKET'),
+                directory: 'uploads',
                 options: {},
             },
         },
