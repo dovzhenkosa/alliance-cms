@@ -6,7 +6,7 @@ export interface GeneralNavigation extends Struct.ComponentSchema {
     displayName: 'Navigation';
   };
   attributes: {
-    item: Schema.Attribute.Component<'general.navigation-item', true>;
+    items: Schema.Attribute.Component<'general.navigation-item', true>;
     label: Schema.Attribute.String & Schema.Attribute.Required;
     url: Schema.Attribute.String;
   };
