@@ -23,11 +23,24 @@ export interface GeneralNavigationItem extends Struct.ComponentSchema {
   };
 }
 
+export interface HomePromoSlide extends Struct.ComponentSchema {
+  collectionName: 'components_home_promo_slides';
+  info: {
+    displayName: 'PromoSlide';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    label: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'general.navigation': GeneralNavigation;
       'general.navigation-item': GeneralNavigationItem;
+      'home.promo-slide': HomePromoSlide;
     }
   }
 }

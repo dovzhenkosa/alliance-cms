@@ -11,17 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string",
+    "promoSlides": {
+      "type": "component",
+      "component": "home.promo-slide",
+      "repeatable": true,
       "required": true
-    },
-    "logo": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
     }
   }
 }
