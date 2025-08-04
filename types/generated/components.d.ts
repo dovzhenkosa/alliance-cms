@@ -23,6 +23,36 @@ export interface GeneralNavigationItem extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeInfoBlock extends Struct.ComponentSchema {
+  collectionName: 'components_home_info_blocks';
+  info: {
+    displayName: 'InfoBlock';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'home.info-block-item', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+          min: 0;
+        },
+        number
+      >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HomeInfoBlockItem extends Struct.ComponentSchema {
+  collectionName: 'components_home_info_block_items';
+  info: {
+    displayName: 'InfoBlockItem';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface HomePromoSlide extends Struct.ComponentSchema {
   collectionName: 'components_home_promo_slides';
   info: {
@@ -40,6 +70,8 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'general.navigation': GeneralNavigation;
       'general.navigation-item': GeneralNavigationItem;
+      'home.info-block': HomeInfoBlock;
+      'home.info-block-item': HomeInfoBlockItem;
       'home.promo-slide': HomePromoSlide;
     }
   }

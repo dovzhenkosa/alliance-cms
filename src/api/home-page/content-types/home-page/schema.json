@@ -16,6 +16,11 @@
       "component": "home.promo-slide",
       "repeatable": true,
       "required": true
+    },
+    "infoBlock": {
+      "type": "component",
+      "component": "home.info-block",
+      "repeatable": false
     }
   }
 }

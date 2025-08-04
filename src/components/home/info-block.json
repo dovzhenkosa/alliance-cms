@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_info_blocks",
+  "info": {
+    "displayName": "InfoBlock"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "home.info-block-item",
+      "repeatable": true,
+      "required": true,
+      "min": 0,
+      "max": 4
+    }
+  },
+  "config": {}
+}
