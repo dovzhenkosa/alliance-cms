@@ -27,11 +27,11 @@
       "type": "string",
       "required": true
     },
-    "FutureEvents": {
+    "futureEvents": {
       "type": "string",
       "required": true
     },
-    "PastEvents": {
+    "pastEvents": {
       "type": "string",
       "required": true
     }
