@@ -488,6 +488,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     promoSlides: Schema.Attribute.Component<'home.promo-slide', true> &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    specialOffers: Schema.Attribute.Component<'home.special-offers', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

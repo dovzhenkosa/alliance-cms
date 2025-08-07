@@ -65,6 +65,17 @@ export interface HomePromoSlide extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeSpecialOffers extends Struct.ComponentSchema {
+  collectionName: 'components_home_special_offers';
+  info: {
+    displayName: 'Special Offers';
+  };
+  attributes: {
+    images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -73,6 +84,7 @@ declare module '@strapi/strapi' {
       'home.info-block': HomeInfoBlock;
       'home.info-block-item': HomeInfoBlockItem;
       'home.promo-slide': HomePromoSlide;
+      'home.special-offers': HomeSpecialOffers;
     }
   }
 }

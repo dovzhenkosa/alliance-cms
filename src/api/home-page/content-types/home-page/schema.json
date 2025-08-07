@@ -21,6 +21,11 @@
       "type": "component",
       "component": "home.info-block",
       "repeatable": false
+    },
+    "specialOffers": {
+      "type": "component",
+      "component": "home.special-offers",
+      "repeatable": false
     }
   }
 }
