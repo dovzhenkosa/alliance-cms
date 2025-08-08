@@ -26,6 +26,15 @@
       "type": "component",
       "component": "home.special-offers",
       "repeatable": false
+    },
+    "faqsTitle": {
+      "type": "string",
+      "required": true
+    },
+    "faqs": {
+      "type": "component",
+      "component": "home.faq",
+      "repeatable": true
     }
   }
 }

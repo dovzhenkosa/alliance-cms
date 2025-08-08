@@ -23,6 +23,17 @@ export interface GeneralNavigationItem extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeFaq extends Struct.ComponentSchema {
+  collectionName: 'components_home_faqs';
+  info: {
+    displayName: 'Faq';
+  };
+  attributes: {
+    answer: Schema.Attribute.RichText & Schema.Attribute.Required;
+    question: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface HomeInfoBlock extends Struct.ComponentSchema {
   collectionName: 'components_home_info_blocks';
   info: {
@@ -81,6 +92,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'general.navigation': GeneralNavigation;
       'general.navigation-item': GeneralNavigationItem;
+      'home.faq': HomeFaq;
       'home.info-block': HomeInfoBlock;
       'home.info-block-item': HomeInfoBlockItem;
       'home.promo-slide': HomePromoSlide;
