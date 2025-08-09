@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface GeneralImageLink extends Struct.ComponentSchema {
+  collectionName: 'components_general_image_links';
+  info: {
+    displayName: 'ImageLink';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface GeneralNavigation extends Struct.ComponentSchema {
   collectionName: 'components_general_navigations';
   info: {
@@ -79,7 +90,7 @@ export interface HomePromoSlide extends Struct.ComponentSchema {
 export interface HomeSpecialOffers extends Struct.ComponentSchema {
   collectionName: 'components_home_special_offers';
   info: {
-    displayName: 'Special Offers';
+    displayName: 'SpecialOffers';
   };
   attributes: {
     images: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
@@ -90,6 +101,7 @@ export interface HomeSpecialOffers extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'general.image-link': GeneralImageLink;
       'general.navigation': GeneralNavigation;
       'general.navigation-item': GeneralNavigationItem;
       'home.faq': HomeFaq;

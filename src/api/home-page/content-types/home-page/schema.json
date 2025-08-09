@@ -35,6 +35,11 @@
       "type": "component",
       "component": "home.faq",
       "repeatable": true
+    },
+    "socialImages": {
+      "type": "component",
+      "component": "general.image-link",
+      "repeatable": true
     }
   }
 }
