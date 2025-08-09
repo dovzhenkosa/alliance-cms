@@ -393,6 +393,7 @@ export interface ApiClubClub extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     phones: Schema.Attribute.RichText & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     telegram: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;

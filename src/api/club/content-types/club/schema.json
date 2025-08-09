@@ -29,6 +29,11 @@
     },
     "telegram": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     }
   }
 }
