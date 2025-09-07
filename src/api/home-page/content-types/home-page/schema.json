@@ -40,6 +40,12 @@
       "type": "component",
       "component": "general.image-link",
       "repeatable": true
+    },
+    "seo": {
+      "type": "component",
+      "component": "general.seo",
+      "repeatable": false,
+      "required": true
     }
   }
 }

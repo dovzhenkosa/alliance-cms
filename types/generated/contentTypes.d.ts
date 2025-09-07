@@ -458,6 +458,8 @@ export interface ApiEventsPageEventsPage extends Struct.SingleTypeSchema {
     pastEvents: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     registerButton: Schema.Attribute.String & Schema.Attribute.Required;
+    seo: Schema.Attribute.Component<'general.seo', false> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -582,6 +584,8 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     promoSlides: Schema.Attribute.Component<'home.promo-slide', true> &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'general.seo', false> &
+      Schema.Attribute.Required;
     socialImages: Schema.Attribute.Component<'general.image-link', true>;
     specialOffers: Schema.Attribute.Component<'home.special-offers', false>;
     updatedAt: Schema.Attribute.DateTime;
@@ -612,6 +616,8 @@ export interface ApiStoriesPageStoriesPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'general.seo', false> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

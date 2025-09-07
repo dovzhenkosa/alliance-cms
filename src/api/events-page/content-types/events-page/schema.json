@@ -34,6 +34,12 @@
     "pastEvents": {
       "type": "string",
       "required": true
+    },
+    "seo": {
+      "type": "component",
+      "component": "general.seo",
+      "repeatable": false,
+      "required": true
     }
   }
 }
