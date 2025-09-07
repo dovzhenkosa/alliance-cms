@@ -12,7 +12,7 @@
     "metaDescription": {
       "type": "string"
     },
-    "keywords": {
+    "metaKeywords": {
       "type": "string"
     },
     "metaImage": {

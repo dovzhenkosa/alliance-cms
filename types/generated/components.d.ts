@@ -40,9 +40,9 @@ export interface GeneralSeo extends Struct.ComponentSchema {
     displayName: 'Seo';
   };
   attributes: {
-    keywords: Schema.Attribute.String;
     metaDescription: Schema.Attribute.String;
     metaImage: Schema.Attribute.Media<'images'>;
+    metaKeywords: Schema.Attribute.String;
     metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
