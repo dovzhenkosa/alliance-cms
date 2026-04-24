@@ -21,7 +21,7 @@
       "required": true
     },
     "date": {
-      "type": "datetime",
+      "type": "date",
       "required": true
     },
     "image": {
@@ -35,6 +35,19 @@
     "description": {
       "type": "richtext",
       "required": true
+    },
+    "startTime": {
+      "type": "time"
+    },
+    "endTime": {
+      "type": "time"
+    },
+    "price": {
+      "type": "richtext"
+    },
+    "registerActive": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
