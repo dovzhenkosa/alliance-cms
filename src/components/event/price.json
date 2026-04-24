@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_event_prices",
+  "info": {
+    "displayName": "Price"
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    }
+  },
+  "config": {}
+}

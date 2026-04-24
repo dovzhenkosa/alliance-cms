@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface EventPrice extends Struct.ComponentSchema {
+  collectionName: 'components_event_prices';
+  info: {
+    displayName: 'Price';
+  };
+  attributes: {
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
+    price: Schema.Attribute.Integer & Schema.Attribute.Required;
+  };
+}
+
 export interface GeneralImageLink extends Struct.ComponentSchema {
   collectionName: 'components_general_image_links';
   info: {
@@ -114,6 +125,7 @@ export interface HomeSpecialOffers extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'event.price': EventPrice;
       'general.image-link': GeneralImageLink;
       'general.navigation': GeneralNavigation;
       'general.navigation-item': GeneralNavigationItem;

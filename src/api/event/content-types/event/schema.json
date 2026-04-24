@@ -42,12 +42,14 @@
     "endTime": {
       "type": "time"
     },
-    "price": {
-      "type": "richtext"
-    },
     "registerActive": {
       "type": "boolean",
       "default": true
+    },
+    "prices": {
+      "type": "component",
+      "component": "event.price",
+      "repeatable": true
     }
   }
 }
